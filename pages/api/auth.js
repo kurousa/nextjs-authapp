@@ -50,7 +50,7 @@ export default (req, res) => {
                     });
                 }
                 /* Check user email in database */
-                const user:User = USERS.find(user => {
+                const user = USERS.find(user => {
                     return user.email === email;
                 });
                 /* Check if exists */
