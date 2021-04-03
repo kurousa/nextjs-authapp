@@ -4,16 +4,10 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { rejects } from 'node:assert';
 
 /* JWT Secret key */
-const JWT_KEY: string = process.env.JWT_KEY || "dummy";
+const JWT_KEY = process.env.JWT_KEY || "dummy";
 
 /* Users collection sample */
-interface User {
-    id: number;
-    email: string;
-    password: string;
-    createdAt: string;
-}[]
-const USERS: User= [
+const USERS = [
     {
       id: 1,
       email: 'example1@example.com',
@@ -40,7 +34,7 @@ const USERS: User= [
     },
   ];
 
-export default (req:NextApiRequest, res:NextApiResponse) => {
+export default (req, res) => {
     return new Promise(resolve => {
         const { method } = req;
         try {
