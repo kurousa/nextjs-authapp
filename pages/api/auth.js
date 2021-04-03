@@ -1,7 +1,5 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { NextApiRequest, NextApiResponse } from 'next'
-import { rejects } from 'node:assert';
 
 /* JWT Secret key */
 const JWT_KEY = process.env.JWT_KEY || "dummy";
